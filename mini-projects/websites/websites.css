@@ -1,0 +1,63 @@
+*{
+
+box-sizing: border-box;
+
+}
+
+
+body{
+
+margin: 0;
+
+}
+
+h2{
+
+margin: 10px 0 22px;
+text-align: center;
+color: hsl(160, 100%, 30%);
+
+}
+
+#link-container{
+
+display: grid;
+width: 1020px;
+grid-template-columns: repeat(3, 300px);
+grid-template-rows: repeat(2, 300px);
+margin: 0 auto 0;
+gap: 60px;
+
+}
+
+.item{
+
+border: 1px solid hsl(6, 93%, 81%);
+border-radius: 4px;
+transition: border 1.2s ease;
+
+}
+
+.item:hover{
+
+border: 1px solid hsl(6, 93%, 61%);
+
+
+}
+
+.item a img{
+
+height: 100%;
+width: 100%;
+
+}
+
+
+.visited{
+
+font-family: 'Times New Roman';
+font-size: 30px;
+color: rgb(0, 68, 255);
+text-align: center;
+
+}
