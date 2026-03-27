@@ -1,41 +1,40 @@
 
 
 
-snacks = [{ 
 
-"Type": "Popcorn",
-"Small": 5,
-"Medium": 6.50,
-"Large": 8}, 
+snacks = {
 
-{
+"popcorn": 6.50, 
+"soda": 5,
+"skittles": 2, 
+"m&m": 3,
+"hot dog": 5,
+"nachos": 7,
 
-"Type": "Soda",
-"Medium": 5,
-"Large": 7
-
-}, 
-
-{"Type": "Boxed Candy",
-    "Skittles": 2,
-    "M&M's": 3}, 
-  
-{"Type": "Others",
-     "Hot Dog": 5,
-     "Nachos": 7},
-     
-     
-     {"Type": "Combos",
-      "Large Popcorn + Large Drink": 12,
-      "Popcorn + Drink + Candy": 15
-      
-      }]
+}
 
 
-print("-----MENU----")
+cart = []
+total = 0
+
+print("-----MENU-----")
+
 for snack in snacks:
-    print(snack["Type"])
-    for key, value in snack.items():
-        if key != "Type":
-           print(key, ": ", value)
-    print()
+    print(f"{snack}: {snacks.get(snack)}")
+
+while True:
+      selection = input("Please select a product from the menu \n")
+
+      if selection in snacks:
+         cart.append(selection)
+         total += snacks.get(selection)
+
+      to_continue = input("Do you wish to add anything else?: Y/N \n").lower()
+      if to_continue == "n":
+         break
+      
+print(f"Your cart: \n")
+for product in cart:
+    print(f"{product}: {snacks.get(product)}")
+print(f"Your total is : {total}")
+
