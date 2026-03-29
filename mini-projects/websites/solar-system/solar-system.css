@@ -55,8 +55,27 @@ align-items: center;
 
 width: 40%;
 height: 200px;
+display: none;
 
 
+}
 
+#bottom-side{
+
+height: 250px;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+
+#text-container{
+
+
+width: 98%;
+height: 180px;
+padding: 20px 4px 0;
+overflow: auto;
 
 }
