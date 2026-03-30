@@ -12,6 +12,9 @@ const planets = [{name: "Mercury", picture: "images/fjbeeRiPRQjQNhizwy7cWX-1024-
 
 
 let planetPic = document.getElementById("planet-pic");
+let input = document.getElementById("planet-input");
+let submitButton = document.getElementById("submit-button");
 
+console.log(submitButton);
 
 
