@@ -13,8 +13,62 @@ const planets = [{name: "Mercury", picture: "images/fjbeeRiPRQjQNhizwy7cWX-1024-
 
 let planetPic = document.getElementById("planet-pic");
 let input = document.getElementById("planet-input");
+let textContainer = document.getElementById("text-container");
 let submitButton = document.getElementById("submit-button");
 
-console.log(submitButton);
+submitButton.addEventListener("click", addContent);
+
+function addContent() {
+
+planetPic.style.display = "block";
+let value = input.value.charAt(0).toUpperCase() + input.value.slice(1)
+
+switch (value) {
+
+case "Mercury":
+             filterContent(0);
+             break;
+
+case "Venus":
+             filterContent(1);
+             break;
+
+case "Earth":
+             filterContent(2);
+             break;
+
+case "Mars":
+             filterContent(3);
+             break;
+
+case "Jupiter":
+             filterContent(4);
+             break;
+
+case "Saturn":
+             filterContent(5);
+             break;
+
+case "Uranus":
+             filterContent(6);
+             break;
+
+case "Neptune":
+             filterContent(7);
+             break;
 
 
+default:
+         planetPic.style.display = "none";
+         textContainer.textContent = `${input.value} is not a planet`;
+}  
+
+}
+
+function filterContent(position) {
+
+planetPic.src = planets[position].picture; 
+textContainer.textContent = planets[position].description
+
+
+}
