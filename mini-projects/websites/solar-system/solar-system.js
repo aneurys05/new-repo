@@ -15,10 +15,18 @@ let planetPic = document.getElementById("planet-pic");
 let input = document.getElementById("planet-input");
 let textContainer = document.getElementById("text-container");
 let submitButton = document.getElementById("submit-button");
+let popUp = document.getElementById("pop-up");
+
 
 submitButton.addEventListener("click", addContent);
 
 function addContent() {
+
+  if (popUp.style.display == "flex") {
+
+     popUp.style.display = "none";
+
+  }
 
 planetPic.style.display = "block";
 let value = input.value.charAt(0).toUpperCase() + input.value.slice(1)
@@ -60,7 +68,11 @@ case "Neptune":
 
 default:
          planetPic.style.display = "none";
-         textContainer.textContent = `${input.value} is not a planet`;
+         textContainer.textContent = ""
+         popUp.style.display = "flex";
+         popUp.classList.add("popContent");
+         popUp.textContent = `${value} is not a planet`
+         
 }  
 
 }
