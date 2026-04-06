@@ -1,0 +1,48 @@
+body{
+
+margin: 0;
+height: 100vh;
+
+
+
+}
+
+
+h1{
+
+color: hsl(160, 100%, 45%);
+text-align: center;
+
+}
+
+
+#container{
+
+height: 200px;
+width: 240px;
+position: relative;
+top: 120px;
+left: 80px;
+
+}
+
+
+#dogPic{
+
+height: 100%;
+width: 100%;
+
+}
+
+
+#speed-selection{
+
+position: absolute;
+bottom: 150px;
+right: 90px;
+width: 140px;
+text-align: center;
+padding: 4px;
+
+}
+
